@@ -1,7 +1,7 @@
 import torch
 
 import sys
-sys.path.append("../NucleiSegmentation/")
+sys.path.append("../../NucleiSegmentation/")
 from options.test_options import TestOptions
 from data import CreateDataLoader
 from models import create_model
@@ -26,7 +26,7 @@ class cGAN_nuclei():
         opt.gpu_ids = gpu_ids
         opt.name = "NU_SEG"
         opt.model_suffix = ""
-        opt.checkpoints_dir = "../NucleiSegmentation/checkpoints/"
+        opt.checkpoints_dir = "../../NucleiSegmentation/checkpoints/"
         opt.model = "test"
         opt.ngf = 64
         opt.norm = "instance"
